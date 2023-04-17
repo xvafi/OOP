@@ -91,3 +91,266 @@
 // 	}
 // }
 // new Employee;
+// №1,2,3,4
+// class Employee {
+// 	constructor(name, salary) {
+// 		this.name = name;
+// 		this.salary = salary;
+// 	}
+	
+// 	show() {
+// 		return this.name + ' ' + Number(this.salary/100 * 10 + this.salary) ;
+// 	}
+// }
+// let employee = new Employee('john', 50000);
+// console.log(employee.show());
+// 13.1,2,3
+// class Employee  {
+// 	#name;
+// 	#salary;
+//  #age;
+
+// 	constructor(name, salary, age) {
+// 		this.#name = name;
+//         this.#salary = salary;
+//         this.#age = age;
+// 	}
+	
+// 	show() {
+// 		return this.#name + ' ' + this.#salary + ' ' + this.#age;
+
+// 	}
+// }
+// let employee = new Employee('john', 50000, 18);
+// console.log(employee.show());
+// 14.1
+// class Employee {
+// 	constructor(name, salary) {
+// 		this.name = name;
+// 		this.salary = salary;
+// 	}
+	
+// 	getSalary() {
+// 		return this.#addSign(this.salary);
+// 	}
+	
+// 	#addSign(num) {
+// 		return num + '$';
+// 	}
+// }
+// 16.1,2,3
+// class Employee  {
+// 	#name;
+// 	#salary;
+// 	#age;
+// 	constructor(name, salary, age) {
+// 		this.#name = name;
+// 		this.#salary = salary;
+//         this.#age = age;
+
+// 	}
+	
+// 	getName() {
+// 		return this.#name;
+// 	}
+	
+// 	getSalary() {
+// 		return this.#salary;
+// 	}
+//     getAge() {
+// 		return this.#age;
+// 	}
+// }
+// let employee = new Employee('john', 50000, 18);
+// console.log(employee.getName());
+// console.log(employee.getSalary());
+// console.log(employee.getAge());
+// 17.1
+// class Employee  {
+// 	#name;
+// 	#salary;
+// 	#age;
+// 	setName(name) {
+// 		this.#name = name;
+// 	}
+// 	setSalary(salary) {
+// 		this.#salary = salary;
+// 	}
+//     setAge(age){
+//         this.#age = age;
+//     }
+// 	getName() {
+// 		return this.#name;
+// 	}
+	
+// 	getSalary() {
+// 		return this.#salary;
+// 	}
+//     getAge() {
+// 		return this.#age;
+// 	}
+// }
+// let employee = new Employee;
+// employee.setName('john');
+// employee.setSalary(50000);
+// employee.setAge(18);
+// console.log(employee.getName());
+// console.log(employee.getSalary());
+// console.log(employee.getAge());
+// 18.1,2
+// class Employee  {
+// 	#age;
+// 	#salary;
+	
+// 	setAge(age) {
+// 		if (age <= 120) {
+// 			this.#age = age;
+// 		} else {
+// 			throw new Error('age is incorrect');
+// 		}
+// 	}
+//     setSalary(salary) {
+// 		this.#salary = salary;
+// 	}
+// 	getAge() {
+// 		return this.#age;
+// 	}
+// 	getSalary() {
+// 		return this.#salary + '$';
+// 	}
+// }
+// let employee = new Employee;
+// employee.setAge(120);
+// employee.setSalary(50000);
+// console.log(employee.getAge());
+// console.log(employee.getSalary());
+// 19.1
+// class Employee  {
+// 	#name;
+// 	#surn;
+
+// 	setName(name) {
+// 		this.#name = name;
+// 		return this;
+// 	}
+// 	setSurn(surn) {
+// 		this.#surn = surn;
+// 		return this;
+// 	}
+	
+// 	getName() {
+// 		return this.#name;
+// 	}
+// 	getSurn() {
+// 		return this.#surn;
+// 	}
+// }
+// let employee = new Employee ;
+// employee.setName('john').setSurn('smit');
+// console.log(employee .getName());
+// console.log(employee.getSurn());
+// 21.2
+// class Student {
+// 	constructor(name) {
+// 		this.name = name;
+// 	}
+// }
+// class Employee {
+// 	constructor(name) {
+// 		this.name = name;
+// 	}
+// }
+// let users = [
+// 	new Student('user1'),
+// 	new Employee('user2'),
+// 	new Student('user3'),
+// 	new Employee('user4'),
+// 	new Student('user5'),
+// 	new Employee('user6'),
+// 	new Student('user7'),
+// ];
+// for (let user of users) {
+//     if(user instanceof Employee){
+//         console.log(user.name)
+//     }
+// }
+// 22.1.2.3.4
+// class Validator {
+// 	show(cor){
+// 		if(typeof(cor) == "string"){
+// 			console.log('все ок')
+// 		}
+// 		else{
+// 			console.log(' это int ')
+// 		}                                                                                                                                                                                                                                                                                                                                                                
+// 	}
+	
+// }
+// let validarot = new Validator;
+// console.log(validarot.show(123))
+// class isEmail {
+// 	show(cor){
+		
+// 		let a = 'kmb@.com'  
+// 		if(a == cor){
+			
+// 			console.log('Email написан  корректно')
+// 		}
+// 		else{
+// 			console.log('Email написан некорректно')
+// 		}                                                                                                                                                                                                                                                                                                                                                                  
+// 	}
+	
+// }
+// let email = new isEmail;
+
+// console.log(email.show('kmb@.com'))
+
+
+// class isDomain {
+// 	show(cor){
+		
+// 		let a = 'code.ru'  
+// 		if(a == cor){
+			
+// 			console.log('Домен написан правильно')
+// 		}
+// 		else{
+// 			console.log('Домен написан неправильно')
+// 		}                                                                                                                                                                                                                                                                                                                                                                  
+// 	}
+	
+// }
+// let domain = new isDomain;
+
+// console.log(domain.show('code.ru'))
+
+
+
+// class isNumber {
+// 		show(cor){
+			
+// 			let a = 'abc123'
+			 
+// 			if(a == cor){
+// 				console.log('В строке есть цифры')
+// 			}
+// 			else{
+// 				console.log('В строке нету цифр')
+// 			}                                                                                                                                                                                                                                                                                                                                                                  
+// 		}
+		
+// 	}
+// 	let number = new isNumber;
+	
+// 	console.log(number.show())
+// 23.1.2.3
+class Employee {
+	constructor(name, position, department) {
+		this.name = name;
+		this.position = position;
+		this.department = department;
+	}
+}
+let city = new City('luis');
+let user = new User('john', 'smit', city);
