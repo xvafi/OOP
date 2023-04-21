@@ -345,12 +345,98 @@
 	
 // 	console.log(number.show())
 // 23.1.2.3
-class Employee {
-	constructor(name, position, department) {
-		this.name = name;
-		this.position = position;
-		this.department = department;
+// class City {
+// 	constructor(name) {
+// 		this.name = name;
+// 	}
+// }
+// class Employee {
+// 	constructor(name, position, department) {
+        
+// 		this.name = name;
+// 		this.position = position;
+// 		this.department = department;
+// 	}
+// }
+
+// let department = new City('Police');
+// let position = new City('boss');
+// let employee = new Employee('john', position, department);
+// console.log(employee.name);
+// console.log(employee.department.name);
+// console.log(employee.position.name);
+// 24.1.2
+// class Employee{
+// 	#name;
+
+// 	constructor(name) {
+// 		this.#name = name;
+// 	}
+// 	getName() {
+// 		return this.#name;
+// 	}
+// }
+// let users = [
+// 	new Employee('john'),
+// 	new Employee('23000'),
+// 	new Employee('eric'),
+// 	new Employee('30000'),
+// 	new Employee('kyle'),
+// 	new Employee('12000'),
+// ];
+// for (let user of users) {
+// 	console.log(user.getName());
+// };
+// 25.1.2.3.4.5
+class User {
+	#name;
+	#salary;
+	
+	constructor(name,salary) {
+		this.#name = name;
+		this.#salary = salary;
+	}
+	getName() {
+		return this.#name;
+	}
+	getSalary() {
+		return this.#salary;
 	}
 }
-let city = new City('luis');
-let user = new User('john', 'smit', city);
+class EmployeesCollection {
+	#users;
+	#salaries;
+	
+	constructor() {
+		this.#users = [];
+	}
+	constructor(){
+		this.#salaries = [];
+	}
+	add(user,sal) {
+		this.#users.push(user)
+		this.#salaries.push(sal);
+	}
+	// addd(sal) {
+	// 	this.#salaries.push(sal);
+	// }
+	show() {
+		for (let user of this.#users) {
+			console.log(user.getName());
+		}
+	}
+	shows() {
+		let a = 0
+		for (let sal of this.#salaries) {
+			
+			a += sal
+			console.log(sal.getSalary());
+		}
+	}
+}
+let uc = new EmployeesCollection;
+uc.add(new User('john',1000));
+uc.add(new User('eric',2000));
+uc.add(new User('kyle',3000));
+uc.shows();
+uc.show();
